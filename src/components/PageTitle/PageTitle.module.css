@@ -1,0 +1,14 @@
+.background {
+    background-color: #b9e0d3;
+    opacity: 0.8;
+    border-radius: 15px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    
+}
+
+.title {
+    font-size: 48px;
+    margin: 0;
+    color: #253b33;
+}

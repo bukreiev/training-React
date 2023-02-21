@@ -1,5 +1,7 @@
-@import-normalize; /* bring in normalize.css styles */
-
+@import-normalize;
+@import url(/src/components/PageTitle/PageTitle.module.css);
+@import url(/src/components/EventBoard/EventBoard.module.css);
+@import url(/src/components/Counter/Counter.css);
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(/public/Background.jpg);
+  background-size: cover;
 }
 
 code {
