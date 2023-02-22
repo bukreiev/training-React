@@ -1,7 +1,7 @@
 import React from 'react';
 import './Counter.css';
 
-const Controls = ({ onIncrement, onDecrement }) => {
+const Controls = ({ onIncrement, onDecrement }) => (
     <div className="counter__controls">
         <button type="button"
             className="counter__button"
@@ -14,6 +14,6 @@ const Controls = ({ onIncrement, onDecrement }) => {
             Decrement on 1
         </button>
     </div>
-};
+);
 
 export default Controls;
