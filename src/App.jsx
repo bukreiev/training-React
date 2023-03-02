@@ -1,21 +1,22 @@
-import  { PageTitle }  from './components/PageTitle/PageTitle'
-import { EventBoard } from 'components/EventBoard/EventBoard';
-import events from './components/EventBoard/events.json'
-import Counter from './components/Counter'
-import Dropdown from 'components/Dropdown';
-import ColorPicker from 'components/ColorPicker';
 import React, {Component} from "react";
-import TodoList from "components/TodoList/TodoList";
+// import { PageTitle } from './components/PageTitle/PageTitle'
+// import { EventBoard } from 'components/EventBoard/EventBoard';
+// import events from './components/EventBoard/events.json'
+// import Counter from './components/Counter'
+// import Dropdown from 'components/Dropdown';
+// import ColorPicker from 'components/ColorPicker';
+// import TodoList from "components/TodoList/TodoList";
 import initialTodos from './components/TodoList/todos.json'
+import Form from './components/Form/Form'
 
-const ColorPickerOptions = [
-  { label: 'red', color: '#F44336' },
-  { label: 'green', color: '#2196F3' },
-  { label: 'blue', color: '#2196F3' },
-  { label: 'grey', color: '#607D88' },
-  { label: 'pink', color: '#E91E63' },
-  { label: 'indigo', color: '#3F5185' },
-];
+// const ColorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#2196F3' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'grey', color: '#607D88' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F5185' },
+// ];
 
 
 class App extends Component {
@@ -28,15 +29,22 @@ class App extends Component {
       todos: prevState.todos.filter(todo => todo.id !== todoId),
     }));
   };
-    
-    
-  render() {
-    const { todos } = this.state;
 
-    const completedTodos = todos.reduce(
-      (total, todo) => (todo.completed ? total + 1 : total),
-      0
-    );
+  formSubmit = data => {
+    setTimeout(() => {
+      
+    }, 1) 
+
+    console.log(data);
+  };
+
+  render() {
+    // const { todos } = this.state;
+
+    // const completedTodos = todos.reduce(
+    //   (total, todo) => (todo.completed ? total + 1 : total),
+    //   0
+    // );
     
     return (<div
       style={{
@@ -50,7 +58,7 @@ class App extends Component {
       }}
     >
 
-      <PageTitle text="Lorem ipsum dolor sit amet consectetur adipisicing elit."/>
+      {/* <PageTitle text="Lorem ipsum dolor sit amet consectetur adipisicing elit."/>
 
       <EventBoard events={events}/>
 
@@ -60,15 +68,16 @@ class App extends Component {
 
       <ColorPicker options={ ColorPickerOptions } />
 
-
       <div>
         <span>Amount: { todos.length }</span>
         <span>Amount od completed: { completedTodos }</span>
       </div>
-      <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+      <TodoList todos={todos} onDeleteTodo={this.deleteTodo} /> */}
       
-      <footer class="footer">
-      <p class="footer__text">footer</p>
+      <Form onSubmit={ this.formSubmit } />
+        
+      <footer className="footer">
+      <p className="footer__text">footer</p>
       </footer>
 
     </div>
@@ -76,5 +85,6 @@ class App extends Component {
   );
   }
 }
+
 
 export default App;
